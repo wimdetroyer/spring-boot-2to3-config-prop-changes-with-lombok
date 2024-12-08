@@ -2,8 +2,10 @@ package com.example;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.context.properties.NestedConfigurationProperty;
+import org.springframework.validation.annotation.Validated;
 
 @ConfigurationProperties(prefix = "app")
+@Validated // Validation enables startup-time safety
 public record ApplicationProperties(
         String foo,
         String bar,
