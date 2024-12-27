@@ -9,8 +9,8 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 
 @Getter
 @Setter
-@ConfigurationProperties
 @ToString(includeFieldNames = true)
+@ConfigurationProperties
 public class NestedApplicationProperties {
 
     private String foo;

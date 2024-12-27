@@ -1,5 +1,11 @@
 app:
-  foo: 'foo'
-  bar: 'bar'
+  url: 'foo'
+  username: 'bar'
+  required: true
   nested:
     foo: 'foonest'
+
+debug: true
+spring:
+  main:
+    web-application-type: none

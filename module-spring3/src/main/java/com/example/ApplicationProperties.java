@@ -1,22 +1,24 @@
 package com.example;
 
+import jakarta.validation.constraints.NotBlank;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.context.properties.NestedConfigurationProperty;
 import org.springframework.validation.annotation.Validated;
 
+/**
+ * Some description.
+ *
+ * @param url Must be filled in.
+ * @param username Must be filled in.
+ * @param required is it required?
+ * @param nested nested props.
+ */
 @ConfigurationProperties(prefix = "app")
-@Validated // Validation enables startup-time safety
+@Validated
 public record ApplicationProperties(
-        String foo,
-        String bar,
-        String baz,
-        NestedApplicationProperties nested
+        @NotBlank String url,
+        @NotBlank String username,
+        boolean required,
+        @NestedConfigurationProperty NestedApplicationProperties nested // Only provides a hint for configuration metadata processing.
 ) {
-    private static String fooStatic = "foo";
-    public static String getFooStatic() {
-        return fooStatic;
-    }
-    public ApplicationProperties {
-        fooStatic = foo; // This will update the static field when the record is created
-    }
 }

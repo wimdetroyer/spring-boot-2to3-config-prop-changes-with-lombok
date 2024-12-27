@@ -8,7 +8,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 
 @Getter
 @Setter
-@ConfigurationProperties
+// @ConfigurationProperties // This isn't needed anymore in SB3
 @ToString(includeFieldNames = true)
 public class NestedApplicationProperties {
 

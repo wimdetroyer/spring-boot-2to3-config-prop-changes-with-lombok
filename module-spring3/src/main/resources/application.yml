@@ -1,9 +1,10 @@
 app:
-  url: 'foo'
-  username: 'bar'
+
   required: true
   nested:
-    foo: 'foonest'
+    foo: 'bla'
+  url:
+
 
 spring:
   main:

@@ -1,9 +1,8 @@
 package com.example;
 
-
-import org.springframework.boot.context.properties.ConfigurationProperties;
-
-
-@ConfigurationProperties
+/**
+ *
+ * @param foo some nested prop.
+ */
 public record NestedApplicationProperties (String foo){
 }
